@@ -10,7 +10,7 @@ export function navbar(){
     let navbar = `
         <nav class="navStyle">
             <div>
-                <img src="../src/assets/mainIcon.svg" />
+                <img src="/src/assets/mainIcon.svg" />
                 ${paths.map((path) => 
                     `<a class=${currentPath === path.link ? 'active' : null} href=${path.link}>${path.text}</a>`
                 ).join('')}

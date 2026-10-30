@@ -18,7 +18,6 @@ export function priceList(data){
         return colorValue
     }
 
-
     return ( 
         `
             <section class="priceListStyle">
