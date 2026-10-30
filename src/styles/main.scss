@@ -1,0 +1,233 @@
+@use "../styles/vars" as vars;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: vars.$color-gray;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.navStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$color-black;
+  height: 46px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .active {
+    color: vars.$color-green;
+  }
+}
+
+.settingsButton {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin: 16px 16px 16px 0px;
+  }
+}
+
+.titleHeading {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.focusLarge {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  border: solid 1px vars.$color-black;
+  background-color: vars.$color-black;
+  box-shadow: 0 0 12px -2px rgba(173, 173, 173, 0.65) inset;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin: 16px auto 16px auto;
+
+  p {
+    margin: 4px;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 52vw;
+    height: 52vw;
+    border: dashed 1px rgba(85, 236, 32, 0.5);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &::before {
+    content: "";
+    width: 47vw;
+    height: 47vw;
+    border: dashed 1px rgba(85, 236, 32, 0.7);
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+.flexContainerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 5vh;
+}
+
+.flexContainerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 5vh;
+
+  div {
+    text-align: center;
+    color: white;
+  }
+}
+
+.focusSmall {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-color: vars.$color-black;
+  box-shadow: 0 0 12px -2px rgba(173, 173, 173, 0.65) inset;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin: 16px auto 16px auto;
+
+  &::after {
+    content: "";
+    border: dashed 1px vars.$color-green;
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+  }
+
+  p,
+  b,
+  i,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.priceListStyle {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: auto;
+    padding: 0;
+    flex-direction: column;
+    li {
+      border-radius: 8px;
+      background-color: vars.$color-black;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      width: 80vw;
+      box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.05);
+      p {
+        margin: 8px 32px 8px 32px;
+      }
+    }
+    margin-bottom: 16px;
+  }
+}
+
+.pStyle {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.greenText {
+  @extend .pStyle;
+  font-size: 1.1rem;
+  color: vars.$color-green;
+}
+
+.footerStyle {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: vars.$color-black;
+
+  p {
+    margin: 4px;
+    padding: 0;
+  }
+}
+
+.dateSelect {
+  background-color: vars.$color-black;
+  color: white;
+  height: 42px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5vh;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
